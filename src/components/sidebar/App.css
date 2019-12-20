@@ -1,0 +1,132 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    }
+    .sidebar {
+    position: fixed;
+    height: 100%;
+    width: 20%;
+    background: #193757;
+    color: #ccd2d9;
+    font-size: 16px;
+    }
+    .sidebar .link {
+    padding: 15px 15px;
+    cursor: pointer;
+    }
+    .sidebar .link.active {
+    border-left: 8px solid #00d5cc;
+    color: white;
+    background: #1c3f63;
+    }
+    .sidebar .category {
+    padding: 15px 15px;
+    font-size: 12px;
+    }
+    .sidebar .profile {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 5px 15px 10px;
+    font-size: 14px;
+    }
+    .sidebar .profile .image-thumbnail {
+    align-items: center;
+    display: flex;
+    }
+    .sidebar .profile .image-thumbnail img {
+    width: 45px;
+    height: 45px;
+    border-radius: 22.5px;
+    }
+    .sidebar .profile .content {
+    margin: auto;
+    }
+
+.ant-menu-item.ant-menu-item-selected::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        border-right: 8px solid #00D5CC;
+        -webkit-transform: scaleY(0.0001);
+        -ms-transform: scaleY(0.0001);
+        transform: scaleY(0.0001);
+        opacity: 0;
+        -webkit-transition: opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+        content: '';
+}
+
+.ant-menu.custom-dark.ant-menu-dark.ant-menu-root.ant-menu-inline {
+    height: 100%;
+    color: rgba(255, 255, 255, 0.65);
+    background: #193757;
+}
+
+.ant-menu.custom-dark.ant-menu-dark.ant-menu-root.ant-menu-inline > .ant-menu-item.ant-menu-item-selected {
+    background-color:#1C3F63;
+    color: white;
+    
+}
+
+.ant-menu.custom-dark.ant-menu-dark.ant-menu-root.ant-menu-inline > .ant-menu-item.ant-menu-item-selected::after {
+    border: 0px;
+    border-right: 5px solid #00D5CC;
+}
+
+.ant-menu-item-group >.ant-menu-item-group-list > .ant-menu-item.ant-menu-item-selected {
+    background-color:#1C3F63;
+    
+    border-right: 5px solid #00D5CC;
+    
+
+}
+
+ .profile {
+    display: flex;
+    flex-direction: row;
+    padding: 15px 5px 15px 10px;
+    font-size: 14px;
+    }
+     .profile .image-thumbnail {
+    align-items: center;
+    display: flex;
+    }
+     .profile .image-thumbnail img {
+    width: 45px;
+    height: 45px;
+    border-radius: 22.5px;
+    }
+     .profile .content {
+    margin: auto;
+    }
+
+    /* .list{
+        display: flex;
+        background: #E5E5E5;
+        width:980px;
+        height: 634px;
+        width: 100%;
+        
+        
+    }
+
+   .list > div{
+    margin: 10px;
+    background: #FFFFFF;
+    overflow-y: scroll;
+   } */
+
+
+.main > .section {
+    width: 80%;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    background: #E5E5E5;
+}

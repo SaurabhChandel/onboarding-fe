@@ -1,26 +1,67 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Sidebar from './components/sidebar/sidebar';
+import AntDSider from './components/sidebar/antSidebar';
+import './index.css';
+import Content from './components/content';
+import Email from './components/emailContainer/email';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = { data: [{
+    title: 'HR Recruiter',
+    email_list: [ 'xyz@gmail.com', 'sadsa@sdsa.com']
+  },
+  {
+    title: 'HR Recruiter',
+    email_list: [ 'xyz@gmail.com', 'sadsa@sdsa.com']
+  },
+  {
+    title: 'HR Recruiter',
+    email_list: [ 'xyz@gmail.com', 'sadsa@sdsa.com']
+  },
+  {
+    title: 'HR Recruiter',
+    email_list: [ 'xyz@gmail.com', 'sadsa@sdsa.com']
+  },
+  {
+    title: 'HR Recruiter',
+    email_list: [ 'xyz@gmail.com', 'sadsa@sdsa.com']
+  },
+  {
+    title: 'HR Recruiter',
+    email_list: [ 'xyz@gmail.com', 'sadsa@sdsa.com']
+  },
+  {
+    title: 'HR Recruiter',
+    email_list: [ 'xyz@gmail.com', 'sadsa@sdsa.com']
+  }
+] }
+
+  addEmail = (index, email) => {
+    let { data } = this.state;
+    data[index].email_list.push(email);
+    this.setState({ data });
+  }
+
+  removeEmail = (parentIndex, childIndex) => {
+    let { data } = this.state;
+    data[parentIndex].email_list.splice(childIndex, 1);
+    this.setState({ data });
+  }
+
+  render() { 
+    return ( <div className='main'>
+      
+      <AntDSider />
+      <div className='section'>
+        {
+          this.state.data.map((d, index) => <Email {...d} index={index}
+          addEmail={this.addEmail}
+          removeEmail={this.removeEmail}/>)
+        } 
+      </div>
+          </div>
+           );
+  }
 }
-
+ 
 export default App;
