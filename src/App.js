@@ -8,7 +8,7 @@ import Email from './components/emailContainer/email';
 class App extends Component {
   state = { data: [{
     title: 'HR Recruiter',
-    email_list: [ 'xyz@gmail.com', 'sadsa@sdsa.com']
+    email_list: [ 'xyz@gmail.com', 'sadsa@sdsa.com','xyz@gmail.com', 'sadsa@sdsa.com','xyz@gmail.com', 'sadsa@sdsa.com','xyz@gmail.com', 'sadsa@sdsa.com']
   },
   {
     title: 'HR Recruiter',

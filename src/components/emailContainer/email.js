@@ -51,16 +51,19 @@ class Email extends Component {
                         {email_list.map((data, i) => <div className='email-li'>
                         <img className='email-li-img' src={data.img ? data.img : faceIcon}/>
                         <div className='email-li-add'>{data}</div>
-                        <div className='email-li-cross'  onClick={() => this.props.removeEmail(index, i)}>X</div></div>)}
+                        <div className='email-li-cross' onClick={() => this.props.removeEmail(index, i)}>X</div>
+                    </div>)}
                     </div>
                 </div>
 
                 <div className="footer">
+                    
                     <input
                     value={this.state.emailInputField}
                     onChange={this.handleChange}
                     className='email-input'
-                    placeholder="Add new email" />
+                    placeholder="Add new email" 
+                    />
                     <div className='email-add-btn'  onClick={this.callAddEmail}> +</div>
                 </div>
 
